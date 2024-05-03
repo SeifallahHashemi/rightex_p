@@ -1,0 +1,22 @@
+.radioBtn {
+    appearance: none;
+    & + label {
+        display: inline-block;
+        background: transparent;
+        border: 1px solid red;
+        padding: .2rem .4rem;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    &:checked + label{
+        background-color: red;
+        transition: all .3s;
+    }
+}
+/*
+.radioBtn:checked label{
+    color: blueviolet;
+    font-size: 3rem;
+}*/

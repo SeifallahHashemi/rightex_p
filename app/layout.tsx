@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
+const perFont = localFont({
+  src: "./../public/Fonts/iransansdn.woff",
+  variable: "--perFont",
+  style: "swap",
+});
+const vazirFont = localFont({
+  src: "./../public/Fonts/VAZIR-FD-WOL.woff",
+  variable: "--vazirFont",
+  style: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} ${perFont.variable} ${vazirFont.variable} min-h-screen overflow-x-hidden`}
+      >
+      <main className={"w-screen min-h-screen overflow-x-clip"}>{children}</main>
+      </body>
     </html>
   );
 }
