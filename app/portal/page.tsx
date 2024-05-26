@@ -1,9 +1,9 @@
 "use client";
 import React, { useRef, useState } from "react";
-import RadioButton from "@/app/components/RadioButton/radio-button";
-import Modal from "@/app/components/Modal/modal";
+import RadioButton from "@/components/RadioButton/radio-button";
+import Modal from "@/components/Modal/modal";
 import {useDebounce} from "use-debounce";
-import Monitor from "@/app/components/monitoring/monitor";
+import Monitor from "@/components/monitoring/monitor";
 
 const Page = () => {
   const [toggleModal, setToggleModal] = useState(false);
